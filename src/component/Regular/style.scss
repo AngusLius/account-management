@@ -1,0 +1,55 @@
+.rugular-container {
+    margin: 57px auto 0;
+    width: 360px;
+    .e-b {
+        border: 1px solid red!important;
+    }
+    .e-m {
+        color: red;
+        font-size: 12px;
+        margin: -10px 0 10px 100px;
+    }
+    .e-s {
+        color: red;
+        font-size: 12px;
+        margin: 0 0 13px 100px;
+    }
+    .l {
+        margin-bottom: 16px;
+        .left {
+            color:#666666;
+            display: inline-block;
+            width: 84px;
+            margin-right: 15px; 
+            .f-1 {
+                letter-spacing: 56px;
+            }
+            .f-2 {
+                letter-spacing: 9px;
+            }
+        }
+        .i {
+            background:#ffffff;
+            border:1px solid #d8dbe3;
+            border-radius:1px;
+            width:258px;
+            height:38px;
+        }
+    }
+    .b {
+        background-color: #fc4a5c;
+        border-radius:1px;
+        cursor: pointer;
+        margin-left: 98px;
+        width:260px;
+        height:41px;
+        text-align: center;
+        .m {
+            color: #ffffff;
+            line-height: 44px;
+        }
+        &:hover {
+            background-color: #EF4859;
+        }
+    }
+}

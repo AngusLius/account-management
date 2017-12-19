@@ -1,0 +1,134 @@
+.enter-container {
+    width: 1102px;
+    margin: 60px auto;
+    .st {
+        width: 485px;
+        .ins-top {
+            .mail, .account {
+                color:#666666;
+                display: inline-block;
+                font-size: 16px;
+                font-weight: bold;
+            }
+            .account {
+                margin-left: 144px; 
+            }
+            .m-1, .m-2 {
+                display: inline-block;
+                font-size:14px;
+                color:#666666;
+            }
+            .m-1 {
+                margin: 24px 0 0 10px;
+            }
+            .m-2 {
+                margin: 24px 0 0 152px;
+            }
+            .p-1 {
+                display: block;
+                width: 437px;
+                height: 141px; 
+                background: url('../../static/img/app.jpg') no-repeat;
+            }
+        }
+        .ins-bottom {
+            .s-1 {
+                font-size:16px;
+                color:#666666; 
+                font-weight: bold;
+            }
+            .s-2 {
+                margin-left: 30px;
+                .t {
+                    color:#666666;
+                    font-weight: bold;
+                    margin: 23px 0 11px 0;
+                }
+                .c {
+                    font-size:12px;
+                    color:#666666;
+                    letter-spacing:0.86px;
+                }
+            }
+        }
+    }
+    .in-box {
+        box-shadow:0 0 15px 0 #e8e8e8;
+        width:428px;
+        height:340px;
+        text-align: center;
+        .l-1 {
+            font-weight: bold;
+            margin: 45px auto 27px;
+        }
+        .p-2 {
+            width: 35px;
+            height: 21px;
+            display: inline-block;
+            background: url('../../static/img/user.png') no-repeat;
+            vertical-align: middle;
+        }
+        .p-3 {
+            width: 35px;
+            height: 21px;
+            display: inline-block;
+            background: url('../../static/img/pwd.png') no-repeat;
+            vertical-align: middle;
+        }
+        .l-2, .l-3 {
+            background:#ffffff;
+            border:1px solid #d8dbe3;
+            border-radius:1px;
+            width:298px;
+            height:38px;
+            margin: 15px auto 0;
+            text-align: right;
+            vertical-align: middle;
+            input {
+                height: 36px;
+                width: 250px;
+                border: none;
+                &::-webkit-input-placeholder { 
+                    font-size:14px;
+                    color:#c6c6c6; 
+                }
+                &::-ms-input-placeholder { 
+                    font-size:14px;
+                    color:#c6c6c6; 
+                }
+                &::-moz-placeholder { 
+                    font-size:14px;
+                    color:#c6c6c6; 
+                }
+            }
+            
+        }
+        .l-4 {
+            margin: 12px 75px 0 0; 
+            font-size:12px;
+            color:#979797;
+            float: right;
+            cursor: pointer;
+        }
+        .l-5 {
+            float: right;
+            margin: 40px 60px 0 0;
+            background-color: #fc4a5c;  
+            border-radius:1px;
+            width:294px;
+            height:41px;
+            color: #ffffff;
+            line-height: 41px;
+            cursor: pointer;
+            &:hover {
+                background-color: #EF4859;
+            }
+        }
+        .e-s {
+            color: red;
+            font-size: 12px;
+            float: left;
+            margin: 32px 0 -30px 74px;;
+        }
+    }
+}

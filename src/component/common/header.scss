@@ -1,0 +1,51 @@
+.common-header {
+    background:#282828;
+    min-width: 1160px;
+    line-height: 58px;
+    color: #999;
+    .head-box {
+        margin: 0 auto;
+        height: 58px;
+        overflow: hidden;
+        width: 1160px;
+        .fl {
+            float: left;
+        }
+        .fr {
+            float: right;
+        }
+        .left-box {
+            .logo {
+                font-size: 18px;
+                position: relative;
+                padding-right: 20px; 
+                .it-logo {
+                    position: relative;
+                    display: block;
+                    float: left;
+                    top: 14px;
+                    height: 32px;
+                    width: 53px;
+                    background: url('../../static/img/it-logo.png') no-repeat;
+                }
+                a {
+                    color: #fff;
+                }
+            }
+            li {
+                float: left;
+                padding: 0 15px;
+            }
+        }
+        .right-box {
+            li {
+                float: left;
+                margin-left: 38px;
+                position: relative;
+                a {
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
