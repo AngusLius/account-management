@@ -41,10 +41,10 @@ class Enter extends React.Component {
                 <div className="in-box float-right">
                     <div className="l-1">非互动娱乐事业群用户，欢迎登入</div>
                     <div className="l-2"><i className="p-2"></i>
-                        <input onChange={this.getAccount.bind(this)} placeholder="域账号或邮箱前缀" />
+                        <input onChange={this.getAccount.bind(this)} onKeyUp={this.handleKeyup.bind(this)} placeholder="域账号或邮箱前缀" />
                     </div>
                     <div className="l-3"><i className="p-3"></i>
-                        <input onChange={this.getPwd.bind(this)} placeholder="域密码" type="password" />
+                        <input onChange={this.getPwd.bind(this)} onKeyUp={this.handleKeyup.bind(this)} placeholder="域密码" type="password" />
                     </div>
                     <Link to='/type'><div className="l-4">忘记密码？</div></Link>
                     <div className="e-s" style={{ display: this.state.errmsg ? 'block' : 'none' }}><i className="error-tip"></i>{this.state.errmsg}</div>
@@ -52,6 +52,11 @@ class Enter extends React.Component {
                 </div> 
             </div>
         )
+    }
+    handleKeyup(e) {
+        if (e.keyCode === 13) {
+            this.userlogin()
+        }
     }
     userlogin() {
         const account = this.state.account,

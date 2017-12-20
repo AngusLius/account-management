@@ -26,26 +26,26 @@ class ModifyInfo extends React.Component {
         return (
             <div>
                 <Header></Header>
-                <NavHeader navName="账号信息"></NavHeader> 
+                <NavHeader navName="修改密码"></NavHeader> 
                 <div className="modify-info-container">
                     <div className="l">
                         <div className="left"><span className="f-1">邮箱前</span>缀</div>
-                        <input className="i" onChange={this.getMail.bind(this)}/>    
+                        <input className="i" onKeyUp={this.handleKeyUp.bind(this)} onChange={this.getMail.bind(this)}/>    
                     </div>
                     <div className="e-msg" style={{ display: !this.state.errmail ? 'none' : 'block' }}><i className="error-tip"></i>{this.state.errmsg}</div>
                     <div className="l">
                         <div className="left"><span className="f">旧密</span>码</div>
-                        <input className="i" type="password" onChange={this.getOldPwd.bind(this)}/>
+                        <input className="i" type="password" onKeyUp={this.handleKeyUp.bind(this)} onChange={this.getOldPwd.bind(this)}/>
                     </div>
                     <div className="e-msg" style={{ display: !this.state.errOld ? 'none' : 'block' }}><i className="error-tip"></i>{this.state.errmsg}</div>
                     <div className="l">
                         <div className="left"><span className="f">新密</span>码</div>
-                        <input className="i" type="password" onChange={this.getNewPwd.bind(this)}/>
+                        <input className="i" type="password" onKeyUp={this.handleKeyUp.bind(this)} onChange={this.getNewPwd.bind(this)}/>
                         <div className="t">
-                            <div>
+                            <div className="tip">
                                 含大小写、数字、特殊字符里面任意三种，长度6-16位，且不与
                             </div>
-                            <div>
+                            <div className="tip">
                                 历史密码重复
                             </div>
                         </div>
@@ -53,7 +53,7 @@ class ModifyInfo extends React.Component {
                     <div className="e-msg" style={{ display: !this.state.errNew ? 'none' : 'block' }}><i className="error-tip"></i>{this.state.errmsg}</div>
                     <div className="l">
                         <div className="left">确认新密码</div>
-                        <input className="i" type="password" onChange={this.getConfirmPwd.bind(this)}/>
+                        <input className="i" type="password" onKeyUp={this.handleKeyUp.bind(this)} onChange={this.getConfirmPwd.bind(this)}/>
                     </div>
                     <div className="e-msg" style={{ display: !this.state.errConfirm ? 'none' : 'block' }}><i className="error-tip"></i>{this.state.errmsg}</div>
                     <div className="e-s" style={{ display: this.state.error ? 'block' : 'none' }}><i className="error-tip"></i>{this.state.error}</div>
@@ -63,6 +63,11 @@ class ModifyInfo extends React.Component {
                 </div>
             </div>
         )
+    }
+    handleKeyUp(e) {
+        if (e.keyCode === 13) {
+            this.modifyPwd()
+        }
     }
     modifyPwd() {
         const mail = this.state.mail,

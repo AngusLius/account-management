@@ -12,17 +12,17 @@ class Header extends React.Component {
                 <div className="head-box clearfix">
                     <div className="left-box fl clearfix">
                         <div className="logo fl">
-                            <a href="" className="it-logo"></a>
-                            <a href="">集团-CN域账号管理平台</a>
+                            <span className="it-logo"></span>
+                            <span>集团 - CN域账号管理平台</span>
                         </div>
                     </div>
                     <div className="right-box fr">
                         <ul>
                             <li>
-                                <a href="">首页</a>
+                                <a target="_blank" href="http://Pw.it.netease.com">首页</a>
                             </li>
                             <li>
-                                <a href="">互动娱乐事业部</a>
+                                <a target="_blank" href="https://rp.nie.netease.com/r/resetpass.php">互动娱乐事业部</a>
                             </li>
                         </ul>
                     </div>

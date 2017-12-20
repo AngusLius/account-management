@@ -28,17 +28,17 @@ class Regular extends React.Component {
                 <div className="rugular-container">
                     <div className="l">
                         <div className="left"><span className="f-1">工</span>号</div>
-                        <input className={this.state.errnum ? 'i e-b' : 'i'} onChange={this.getJobNum.bind(this)}/>    
+                        <input className={this.state.errnum ? 'i e-b' : 'i'} onKeyUp={this.handleKeyup.bind(this)} onChange={this.getJobNum.bind(this)}/>    
                     </div>   
                     <div className="e-m" style={{ display: this.state.errnum ? 'block' : 'none' }}><i className="error-tip"></i>{this.state.errmsg}</div>
                     <div className="l">
                         <div className="left"><span className="f-2">邮箱前</span>缀</div>
-                        <input className={this.state.errmail ? 'i e-b' : 'i'} onChange={this.getMail.bind(this)}/>    
+                        <input className={this.state.errmail ? 'i e-b' : 'i'} onKeyUp={this.handleKeyup.bind(this)} onChange={this.getMail.bind(this)}/>    
                     </div>
                     <div className="e-m" style={{display: this.state.errmail ? 'block' : 'none'}}><i className="error-tip"></i>{this.state.errmsg}</div>
                     <div className="l">
                         <div className="left">身份证后四位</div>
-                        <input className={this.state.errcard ? 'i e-b' : 'i'} onChange={this.getCard.bind(this)}/>    
+                        <input className={this.state.errcard ? 'i e-b' : 'i'} onKeyUp={this.handleKeyup.bind(this)} onChange={this.getCard.bind(this)}/>    
                     </div>
                     <div className="e-m" style={{ display: this.state.errcard ? 'block' : 'none' }}><i className="error-tip"></i>{this.state.errmsg}</div>
                     <div className="e-s" style={{ display: this.state.error ? 'block' : 'none' }}><i className="error-tip"></i>{this.state.error}</div>
@@ -48,6 +48,11 @@ class Regular extends React.Component {
                 </div>
             </div>
         )
+    }
+    handleKeyup(e) {
+        if (e.keyCode === 13) {
+            this.resetPwd();
+        }
     }
     resetPwd() {
         this.setState({

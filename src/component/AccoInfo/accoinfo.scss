@@ -1,4 +1,5 @@
 .acc-info-container {
+    animation: fade-in 1.2s;
     width: 640px;
     margin: 31px auto 0;
     .n-b {
@@ -40,5 +41,9 @@
                 color: #42a5f5;
             }
         }
+    }
+    @keyframes fade-in {
+        from { opacity: 0;}
+        to { opacity: 100%;}
     }
 }

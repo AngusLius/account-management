@@ -29,12 +29,12 @@ class Partner extends React.Component {
                 <div className="partner-container"> 
                     <div className="l">
                         <div className="left" value={this.state.value}>工作邮箱</div>
-                        <input className={this.state.mailerr ? 'i-1' : 'i-1 e-border'} onChange={this.getMail.bind(this)}/>    
+                        <input className={this.state.mailerr ? 'i-1' : 'i-1 e-border'} onKeyUp={this.handleKeyUp.bind(this)} onChange={this.getMail.bind(this)}/>    
                         <div className="t">
-                            <div>
+                            <div className="tip">
                                 1、只支持corp邮箱、易信邮箱
                             </div>
-                            <div>
+                            <div className="tip">
                                 2、若域账号和工作邮箱不相同，不支持修改
                             </div>
                         </div>
@@ -42,7 +42,7 @@ class Partner extends React.Component {
                     <div className="e-msg" style={{display: this.state.mailerr ? 'none' : 'block'}}><i className="error-tip"></i>{this.state.errmsg}</div>
                     <div className="l">
                         <div className="left"><span className="f">验证</span>码</div>
-                        <input className={this.state.codeerr ? 'i-2' : 'i-2 e-border'} onChange={this.getIntCode.bind(this)}/>
+                        <input className={this.state.codeerr ? 'i-2' : 'i-2 e-border'} onKeyUp={this.handleKeyUp.bind(this)} onChange={this.getIntCode.bind(this)}/>
                         <div className={this.state.first ? "g-code-1" : "g-code-3"} onClick={this.getCode.bind(this)} style={{display: this.state.show ? '' : 'none'}}>获取验证码</div>
                         <div className="g-code-2" style={{ display: !this.state.show ? '' : 'none' }}>{this.state.num}秒后获取</div>
                     </div>
@@ -53,6 +53,11 @@ class Partner extends React.Component {
                 </div>
             </div>
         )
+    }
+    handleKeyUp(e) {
+        if (e.keyCode === 13) {
+            this.resetPwd()
+        }
     }
     //重置密码
     resetPwd() {
